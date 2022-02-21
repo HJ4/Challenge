@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats-preview</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font-family: 'poppins';
+        }
+        :root{
+            --maincolor:hsl(233, 47%, 7%);
+            --secondcolor:hsl(244, 38%, 16%);
+            --thirdcolor:hsl(277, 64%, 61%);
+            --mainheadingcolor:hsl(0, 0%, 100%);
+            --mainpargraphcolor:hsla(0, 0%, 100%, 0.75);
+            --secondheadingcolor:hsla(0, 0%, 100%, 0.6);
+
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            background-color: var(--maincolor);
+            padding: 5em;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: var(--secondcolor);
+            border-radius: 10px;
+
+        }
+        .container .container__lcontent{
+            display: grid;
+            padding: 3em;
+            grid-template-rows: 2fr 1fr;
+        }
+
+        .container .container__lcontent .intro{
+            display: flex;
+            flex-direction: column;
+        }
+        .container .container__lcontent .quick-info{
+            justify-self: stretch;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+
+        .container .container__lcontent .intro p{
+            width: 100%;
+            font-size: 1.2em;
+            color: var(--secondheadingcolor)
+        }
+        .container .container__lcontent .intro h1{
+            width: 100%;
+            font-size: 2.5em;
+            margin-bottom: .5em;
+            color: var(--mainheadingcolor);
+        }
+        .container .container__lcontent .intro h1 span{
+            color: hsl(277, 64%, 61%);
+        }
+
+        .container .container__rcontent{
+            background-image: url("stats-preview-card-component-main/images/image-header-desktop.jpg");
+            background-size: cover;
+            border-radius: 0px 10px 10px 0;
+            position: relative;
+        }
+
+        .container .container__rcontent::before{
+            inset: 0;
+            content: " ";
+            position: absolute;
+            background-color:rgba(170, 92, 219, 0.5);
+            border-radius: 0px 10px 10px 0px;
+        }
+        .container .container__rcontent .imgbox img{
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .container .container__lcontent .quick-info div p:nth-child(odd){
+            color: var(--mainheadingcolor);
+            text-transform: uppercase;
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+        .container .container__lcontent .quick-info div p:nth-child(even){
+            color: var(--secondheadingcolor);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container__lcontent">
+            <div class="intro">
+                <h1>get <span>insights</span> that help<br>your business grow.</h1>
+                <p>Discover the benfits of data analytic and make better decisions regarding revenue, customer experince , and overall efficiency</p>
+            </div>
+            <div class="quick-info">
+                <div>
+                  <p>10k+</p>
+                  <p>companies</p>
+                </div>
+                <div>
+                  <p>314</p>
+                  <p>templates</p>
+                </div>
+                <div>
+                  <p>12m+</p>
+                  <p>queries</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container__rcontent">
+           
+        </div>
+    </div>
+</body>
+</html>
